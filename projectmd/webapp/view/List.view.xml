@@ -8,7 +8,7 @@
 
     <semantic:SemanticPage
         id="listPage"
-        preserveHeaderStateOnScroll="true"
+        
         toggleHeaderOnTitleClick="false">
         <smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="SEPMRA_C_PD_Product" persistencyKey="SmartFilter_Explored" basicSearchFieldName="Bukrs" enableBasicSearch="true" >
 				
