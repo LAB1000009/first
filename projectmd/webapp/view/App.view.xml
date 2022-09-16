@@ -8,7 +8,7 @@
     <App
         id="app"
         
-        busyIndicatorDelay="{appView>/delay}">
+        >
         <f:FlexibleColumnLayout
             id="layout"
             layout="{appView>/layout}"
