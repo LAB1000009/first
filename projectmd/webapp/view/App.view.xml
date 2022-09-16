@@ -7,7 +7,7 @@
     xmlns:mvc="sap.ui.core.mvc">
     <App
         id="app"
-        busy="{appView>/busy}"
+        
         busyIndicatorDelay="{appView>/delay}">
         <f:FlexibleColumnLayout
             id="layout"
