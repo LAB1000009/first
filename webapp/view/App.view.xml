@@ -7,10 +7,6 @@
     xmlns:mvc="sap.ui.core.mvc">
     <App
         >
-        <f:FlexibleColumnLayout
-            id="layout"
-            layout="{appView>/layout}"
-            backgroundDesign="Translucent">
-        </f:FlexibleColumnLayout>
+       
     </App>
 </mvc:View>
