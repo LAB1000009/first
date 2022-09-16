@@ -1,0 +1,39 @@
+<core:FragmentDefinition	
+xmlns="sap.m"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:core="sap.ui.core" >
+   <Dialog resizable="true">
+			<smartTable:SmartTable entitySet="SEPMRA_C_PD_ProductPriceRange"
+			tableType="ResponsiveTable" id="SmartTable"
+			 useTablePersonalisation="true" header="Products" beforeRebindTable="onBeforeRebindDialogTable"
+			showRowCount="true" persistencyKey="SmartTableRefApp_Explored"
+			enableAutoBinding="true" >
+			
+				<Table>
+			<columns>
+				<Column id="Kunnr" hAlign="Begin">
+					<customData>
+						<core:CustomData key="p13nData"
+										 value='\{"columnKey": "Product", "autoColumnWidth": \{ "visibleProperty": "Product" }, "columnIndex": 1, "leadingProperty": "Product", "sortProperty": "Product", "additionalProperty": "Product", "description": "Product", "displayBehaviour": "descriptionOnly", "width": "360px"}' />
+					</customData>
+					<Text text="Product" />
+				</Column>
+				
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<ObjectStatus text="{Product}" state="Error" />
+					</cells>
+					
+				</ColumnListItem>
+			</items>
+		</Table>
+		</smartTable:SmartTable>
+        <buttons>
+        <Button text="Cancle" press="onPressCancle"/>
+        <Button text="refresh" press="onPressRefresh"/>
+        </buttons>
+	</Dialog>
+</core:FragmentDefinition>

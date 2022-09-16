@@ -1,0 +1,33 @@
+<mvc:View
+    controllerName="projectmd.projectmd.controller.List"
+    xmlns="sap.m"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <semantic:SemanticPage
+        id="listPage"
+        preserveHeaderStateOnScroll="true"
+        toggleHeaderOnTitleClick="false">
+        <smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="SEPMRA_C_PD_Product" persistencyKey="SmartFilter_Explored" basicSearchFieldName="Bukrs" enableBasicSearch="true" >
+				
+				<!-- layout data used to make the table growing but the filter bar fixed -->
+				
+			</smartFilterBar:SmartFilterBar>
+			<smartTable:SmartTable id="list" entitySet="SEPMRA_C_PD_Product" smartFilterId="smartFilterBar" 
+            tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true" 
+            useTablePersonalisation="true" header="Line Items" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored" 
+            enableAutoBinding="true" class="sapUiResponsiveContentPadding" enableAutoColumnWidth="true" editTogglable="true" 
+            >
+					<smartTable:customToolbar>
+			<OverflowToolbar design="Transparent">
+				<ToolbarSpacer/>
+				<OverflowToolbarButton icon="sap-icon://refresh" tooltip="refresh" press="onPressRefresh"/>
+				
+			</OverflowToolbar>
+		</smartTable:customToolbar>
+				
+			</smartTable:SmartTable>
+    </semantic:SemanticPage>
+</mvc:View>
