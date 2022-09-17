@@ -11,7 +11,7 @@
         <semantic:titleHeading>
             <Title
                 id="listPageTitle"
-                text="{listView>/title}"
+                text="фывфы"
                 level="H2"/>
         </semantic:titleHeading>
         <semantic:content>
