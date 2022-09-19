@@ -11,7 +11,7 @@
         <semantic:titleHeading>
             <Title
                 text="{Product}"
-                level="H2"/>
+               />
         </semantic:titleHeading>
         <semantic:headerContent>
             <ObjectAttribute title="{i18n>priceTitle}"/>

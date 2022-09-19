@@ -1,0 +1,56 @@
+<mvc:View
+		height="100%"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:core="sap.ui.core"
+		xmlns:forms="sap.ui.layout.form"
+		xmlns:uxap="sap.uxap"
+		xmlns="sap.m"
+        xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+		 controllerName="namespace.project3.controller.Detail"
+		>
+	<uxap:ObjectPageLayout id="detailPage" upperCaseAnchorBar="false">
+		<uxap:headerTitle>
+			<uxap:ObjectPageHeader
+					objectTitle="{Product}"
+					objectSubtitle="{i18n>priceTitle}"/>
+		</uxap:headerTitle>
+
+		<uxap:sections>
+			<uxap:ObjectPageSection titleUppercase="false" title="Sample Forms">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="First Sample Form" titleUppercase="false">
+						<uxap:blocks>
+							<forms:SimpleForm
+								title="Location"
+								editable="false"
+								layout="ColumnLayout">
+
+								<Label text="Country"/>
+								<Text text="France"/>
+
+								<Label text="Subsidiary"/>
+								<Text text="SAP France"/>
+
+							</forms:SimpleForm>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+					
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection titleUppercase="false" showTitle="false">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="Promoted SubSection with Hidden Title" titleUppercase="false">
+						<smartTable:SmartTable id='list' entitySet="SEPMRA_C_PD_Review" smartFilterId="smartFilterBar"
+			tableType="ResponsiveTable" 
+			useVariantManagement="true" useTablePersonalisation="true" header="Line Items"
+			showRowCount="true" persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true"
+			 enableAutoColumnWidth="true" editTogglable="true">
+             <Table fixedLayout="true" mode="SingleSelectMaster" selectionChange="onSelectionChange"></Table>
+             </smartTable:SmartTable>
+					</uxap:ObjectPageSubSection >
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+		</uxap:sections>
+	</uxap:ObjectPageLayout>
+</mvc:View>

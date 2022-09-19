@@ -1,0 +1,29 @@
+<mvc:View
+    controllerName="namespace.project3.controller.List"
+    xmlns="sap.m"
+   
+    	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <Page
+        id="listPage"
+        preserveHeaderStateOnScroll="true"
+        toggleHeaderOnTitleClick="false">
+        
+        
+            <!-- For client side filtering add this to the items attribute: parameters: {operationMode: 'Client'}}" -->
+            <smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="SEPMRA_C_PD_Review" persistencyKey="SmartFilter_Explored">
+			
+		</smartFilterBar:SmartFilterBar>
+		<smartTable:SmartTable id='list' entitySet="SEPMRA_C_PD_Review" smartFilterId="smartFilterBar"
+			tableType="ResponsiveTable" 
+			useVariantManagement="true" useTablePersonalisation="true" header="Line Items"
+			showRowCount="true" persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true"
+			 enableAutoColumnWidth="true" editTogglable="true">
+             <Table fixedLayout="true" mode="SingleSelectMaster" selectionChange="onSelectionChange"></Table>
+             </smartTable:SmartTable>
+        
+    </Page>
+</mvc:View>
